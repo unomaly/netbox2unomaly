@@ -74,21 +74,3 @@ class System(object):
             })
         )
         return resp
-
-    # def is_name_ip(self):
-    #     if isinstance(self.name, str):
-    #         try:
-    #             socket.inet_aton(self.name)
-    #             return True
-    #         except OSError:
-    #             return False
-    #     return False
-
-    # def is_alias_ip(self):
-    #     if isinstance(self.alias, str):
-    #         try:
-    #             socket.inet_aton(self.alias)
-    #             return True
-    #         except OSError:
-    #             return False
-    #     return False
