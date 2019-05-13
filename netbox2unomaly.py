@@ -67,7 +67,10 @@ def run(
         device = nb.dcim.devices.get(name=system.name)
         if device:
             click.echo(f"Found device {device.name}")
-            system_groups = [group['name'] for group in system.groups]
+            system_groups = []
+            current_groups = system.groups
+            if current_groups:
+                system_groups = [group['name'] for group in current_groups]
             if device.rack not in system_groups:
                 # Add to Unomaly group here.
                 if not noop:
